@@ -1,0 +1,100 @@
+:root {
+    --laranja-card: hsl(31, 77%, 52%);
+    --ciano-card3: hsl(184, 100%, 22%);
+    --ciano-card2: hsl(179, 100%, 13%);
+    --background: hsl(0, 0%, 95%);
+    --cor-texto: hsla(0, 0%, 100%, 0.75);
+}
+
+body {
+    background-color: var(--background);
+    font-size: 15px;
+    height: 100vh;
+    display: flex;
+}
+
+.principal {
+    margin: auto;
+    padding: auto;
+    width: 1000px;
+    height: 530px;
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    border-radius: 10px;
+}
+
+.container__laranja {
+    background-color: var(--laranja-card);
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    padding: 4em 4em 4em 4em;
+}
+
+.container__ciano {
+    background-color: var(--ciano-card3);
+    padding: 4em 4em 4em 4em;
+}
+
+.container__cianoescuro {
+    background-color: var(--ciano-card2);
+    padding: 4em 4em 4em 4em;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+h1 {
+    margin: 1.2em 0 0 0;
+    font-family: 'Big Shoulders Display';
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 36px;
+    color: var(--background);
+}
+
+p {
+    font-family: 'Lexend Deca';
+    font-weight: 400;
+    color: var(--cor-texto);
+    font-size: 15px;
+    line-height: 1.6em;
+}
+
+a {
+    font-family: 'Lexend Deca';
+    font-weight: 400;
+    display: block;
+    text-decoration: none;
+    background-color: var(--background);
+    text-align: center;
+    width: 120px;
+    padding: 1em;
+    border-radius: 35px;
+    margin: 6em 0 0 0;
+}
+
+#botao1 {
+    color: var(--laranja-card);
+}
+
+#botao2 {
+    color: var(--ciano-card3);
+}
+
+#botao3 {
+    color: var(--ciano-card2)
+}
+
+@media screen and (max-width: 470px) {
+    .principal {
+        display: block;
+        margin: 0;
+        width: 100vh;
+    }
+
+    .container__laranja, .container__cianoescuro, .container__ciano {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+}
